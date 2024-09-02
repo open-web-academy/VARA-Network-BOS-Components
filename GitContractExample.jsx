@@ -39,58 +39,63 @@ const gitActionsMenu = (
     <div className="mb-4 d-flex flex-column gap-4 align-items-center">
       <Btn
         style={{ width: "348px" }}
-        onClick={() => setActiveAction("pushData")}
-      >
-        Push Data
-      </Btn>
-      <Btn
-        style={{ width: "348px" }}
         onClick={() => setActiveAction("viewBranches")}
       >
         View Branches
       </Btn>
-      <div className="d-flex flex-row gap-2">
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("createBranch")}
-        >
-          Create Branch
-        </Btn>
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("deleteBranch")}
-        >
-          Delete Branch
-        </Btn>
-      </div>
-      <div className="d-flex flex-row gap-2">
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("addCollaborator")}
-        >
-          Add Collaborator
-        </Btn>
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("deleteCollaborator")}
-        >
-          Delete Collaborator
-        </Btn>
-      </div>
-      <div className="d-flex flex-row gap-2">
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("renameRepo")}
-        >
-          Rename Repo
-        </Btn>
-        <Btn
-          style={{ width: "170px" }}
-          onClick={() => setActiveAction("renameBranch")}
-        >
-          Rename Branch
-        </Btn>
-      </div>
+      {isCollab && (
+        <>
+          <Btn
+            style={{ width: "348px" }}
+            onClick={() => setActiveAction("pushData")}
+          >
+            Push Data
+          </Btn>
+          <div className="d-flex flex-row gap-2">
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("createBranch")}
+            >
+              Create Branch
+            </Btn>
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("deleteBranch")}
+            >
+              Delete Branch
+            </Btn>
+          </div>
+          <div className="d-flex flex-row gap-2">
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("addCollaborator")}
+            >
+              Add Collaborator
+            </Btn>
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("deleteCollaborator")}
+            >
+              Delete Collaborator
+            </Btn>
+          </div>
+          <div className="d-flex flex-row gap-2">
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("renameRepo")}
+            >
+              Rename Repo
+            </Btn>
+            <Btn
+              style={{ width: "170px" }}
+              onClick={() => setActiveAction("renameBranch")}
+            >
+              Rename Branch
+            </Btn>
+          </div>
+        </>
+      )}
+
       <Btn
         style={{ width: "348px" }}
         onClick={() => {
